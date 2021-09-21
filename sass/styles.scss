@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f0ea;
+}
+main {
+  padding: 20px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hiring {
+  display: inline-block;
+  background: linear-gradient(to right, rgb(231, 153, 8), rgb(228, 61, 10));
+  p {
+    color: white;
+  }
+}
+
+//Reusable
+.flex-container {
+  display: flex;
+}
+.flex {
+  flex: 1;
+}
+.flex-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.desktop {
+  display: none;
+}
+// End of reusable
