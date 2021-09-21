@@ -34,7 +34,7 @@
             <!-- End of flex-->
 
             <div class="flex desktop">
-              <ul>
+              <ul class="flex-center">
                 <li>
                   <a href="#"><p>Plans</p></a>
                 </li>
@@ -47,8 +47,10 @@
               </ul>
             </div>
             <div class="flex-right desktop">
-              <a href="#"><p>Sign in</p></a>
-              <button><p>Join Waitlist</p></button>
+              <div class="float-right">
+                <a href="#"><p>Sign in</p></a>
+                <button><p>Join Waitlist</p></button>
+              </div>
             </div>
             <!-- End of flex-->
           </div>
@@ -76,10 +78,15 @@
             </p>
             <div class="flex-container-vertical email-container">
               <div class="flex">
-                <input type="email" placeholder="Enter e-mail address" />
+                <input
+                  id="email-field"
+                  type="email"
+                  placeholder="Enter e-mail address"
+                />
+                <p id="invalid-text">Invalid Email</p>
               </div>
               <div class="flex">
-                <button><p>Join Waitlist</p></button>
+                <button id="email-submit"><p>Join Waitlist</p></button>
               </div>
             </div>
             <!-- End of flex container-->

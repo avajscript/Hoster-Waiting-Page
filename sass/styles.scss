@@ -23,6 +23,11 @@ main {
 ul {
   list-style: none;
 }
+li {
+  &:hover p {
+    color: black;
+  }
+}
 
 a {
   text-decoration: none;
@@ -30,7 +35,7 @@ a {
 p {
   font-family: Plusquam;
   line-height: 1.5;
-  color: rgb(51, 43, 42);
+  color: #87827a;
 }
 h1 {
   font-size: 3rem;
@@ -78,11 +83,18 @@ h1 {
   display: flex;
   flex-basis: 70%;
 }
+.flex-center {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
 
 .desktop {
   display: none;
 }
-
+.float-right {
+  float: right;
+}
 // End of reusable
 
 .mid-section {
@@ -136,6 +148,9 @@ input {
   border: none;
   outline: none;
   height: 50px;
+  &::placeholder {
+    color: #87827a;
+  }
 }
 button {
   width: 100%;
@@ -147,6 +162,9 @@ button {
   cursor: pointer;
   p {
     color: white;
+  }
+  &:hover {
+    background-color: #7191e4;
   }
 }
 .no-spam {
@@ -177,9 +195,48 @@ button {
     flex-basis: 90%;
     margin-left: 1rem;
   }
+  p {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:nth-of-type(2) {
+      font-family: Utopia;
+    }
+  }
 }
-// Just setting lower screen width temporarily
-@media only screen and (min-width: 750px) {
+#invalid-text {
+  color: red;
+  display: none;
+}
+
+// Tablet
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 3rem;
+  }
+  .email-container {
+    flex-direction: row;
+    margin-right: 20%;
+    .flex {
+      &:nth-of-type(1) {
+        flex-basis: 65%;
+        margin-right: 1rem;
+      }
+      &:nth-of-type(2) {
+        flex-basis: 35%;
+      }
+    }
+  }
+  .bottom-section {
+    .flex-container-vertical {
+      flex-direction: row;
+    }
+  }
+}
+// Desktop
+@media only screen and (min-width: 1052px) {
   main {
     padding: 4rem 10%;
   }
@@ -190,10 +247,6 @@ button {
     display: none;
   }
   .navbar {
-    li {
-      display: inline-block;
-      margin-right: 1.5rem;
-    }
     button {
       width: 150px;
     }
@@ -205,6 +258,9 @@ button {
     .flex-right {
       a {
         margin-right: 2rem;
+        &:hover p {
+          color: black;
+        }
       }
     }
     p {
@@ -231,17 +287,7 @@ button {
     padding-right: 10%;
     max-width: 750px;
   }
-  .email-container {
-    .flex {
-      &:nth-of-type(1) {
-        flex-basis: 65%;
-        margin-right: 1rem;
-      }
-      &:nth-of-type(2) {
-        flex-basis: 35%;
-      }
-    }
-  }
+
   .no-spam {
     margin-top: 0;
   }
